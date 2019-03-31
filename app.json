@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+       "selectedColor": "#11cd6e",
+       "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "image/coming.png",
+      "selectedIconPath": "image/coming-active.png"
+    },{
+      "pagePath": "pages/order/order",
+      "text": "榜单",
+      "iconPath": "image/coming.png",
+      "selectedIconPath": "image/coming-active.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+     "iconPath": "image/coming.png",
+    "selectedIconPath": "image/coming-active.png"
+    }
+    
+    
+    ]
+  }
+}

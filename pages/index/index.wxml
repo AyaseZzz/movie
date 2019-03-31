@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='nav'>
+    <text class='title'>影院热映</text>
+    <text class='more' bindtap='more'>更多</text>
+  </view>
+  <scroll-view scroll-x="true" scroll-left="0">
+  <view class="scroll-x">
+    <view wx:for="{{list}}">
+       <image src='{{item.images.small}}'></image>
+    </view>
+  </view>
+</scroll-view>
+
+</view>

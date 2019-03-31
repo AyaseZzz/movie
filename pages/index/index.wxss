@@ -1,0 +1,27 @@
+.nav{
+  width: 96%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.more{
+  color: #42bd56;
+}
+
+.scroll-x {
+  display: flex;
+  flex-direction: row; 
+}
+
+.scroll-x view{
+  display: flex;
+  margin-right:2%;
+  width: 100px;
+  height: 187px;
+}
+.scroll-x view image{
+  width: 100px;
+  height: 143px;
+}
