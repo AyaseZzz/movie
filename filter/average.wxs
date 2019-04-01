@@ -1,0 +1,13 @@
+
+var numToFixed = function (num, digits = 1) {
+  if (typeof num !== 'number') {
+    num = Number(num)
+  }
+  return num.toFixed(digits)
+}
+
+
+module.exports = {
+  numToFixed: numToFixed,
+ 
+}

@@ -1,27 +1,95 @@
-.nav{
+@import '../../compont/star/star.wxss';
+.header{
+  background-color: #42bd56;
+  padding: 20rpx 0;
+}
+.search {
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 94%;
+  margin:0 auto;
+  border-radius: 15rpx;
+  color: #ccc;
+  padding: 10rpx 0;
+  font-size: .8rem;
+  background-color: #fff;
+  
+  
+}
+
+.search image {
+  margin-right: 15rpx;
+  height: 30rpx;
+  width: 30rpx;
+  vertical-align: middle;
+  
+}
+
+
+
+.nav {
   width: 96%;
   height: 100rpx;
   line-height: 100rpx;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-.more{
+
+.more {
   color: #42bd56;
 }
 
 .scroll-x {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
-.scroll-x view{
+.scroll-x>view {
   display: flex;
-  margin-right:2%;
+  flex-direction: column;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-right: 2%;
   width: 100px;
   height: 187px;
 }
-.scroll-x view image{
+
+.scroll-x .title {
+  margin-top: 0.2rem;
+  font-size: 0.94rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #111;
+}
+
+.pic {
   width: 100px;
   height: 143px;
+}
+
+/* .avg{
+  margin-top: .3rem;
+  display: flex;
+  flex-direction: row;
+  line-height: 25rpx;
+  height: 25rpx; 
+  justify-content: space-around
+  
+} */
+
+.star {
+  font-size: 0.7rem;
+}
+
+.num {
+  color: #aaa;
+  font-size: 0.72rem;
+}
+
+.active {
+  color: blue;
 }

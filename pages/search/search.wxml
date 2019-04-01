@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<!-- <import src='../../compont/header/header.wxml' />
+<template is='header'></template>   -->
+<import src='../../compont/star/star.wxml' />
+<wxs module="filter" src="../../filter/average.wxs"></wxs>
+
+<view class='header'>
+  <view class='search'>
+    <image src='../../image/search.png'></image>
+    <input type='text' placeholder='搜索' bindinput='searchMovie'></input>
+  </view>
+</view>
+<view class='list'>
+  <view class='content' wx:for="{{searchMovie}}" wx:key='item.id' data-id='{{item.id}}' bindtap='detail'>
+    <image class='pic' src="{{item.images.medium}}"></image>
+    <view class='list_body'>
+      <text class='title'>{{item.title}}</text>
+      <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+      <text class='details'>{{item.year}}/{{item.directors[0].name}}/{{item.genres}}</text>
+    </view>
+  </view>
+</view>

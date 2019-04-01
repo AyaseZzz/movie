@@ -1,38 +1,41 @@
 {
-  "pages":[
+  "pages": [
+    "pages/details/details",
     "pages/index/index",
+    "pages/search/search",
     "pages/order/order",
     "pages/my/my",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#42bd56",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#a9b7b7",
-       "selectedColor": "#11cd6e",
-       "borderStyle": "black",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "image/coming.png",
-      "selectedIconPath": "image/coming-active.png"
-    },{
-      "pagePath": "pages/order/order",
-      "text": "榜单",
-      "iconPath": "image/coming.png",
-      "selectedIconPath": "image/coming-active.png"
-    },{
-      "pagePath": "pages/my/my",
-      "text": "我的",
-     "iconPath": "image/coming.png",
-    "selectedIconPath": "image/coming-active.png"
-    }
-    
-    
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/coming.png",
+        "selectedIconPath": "image/coming-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "榜单",
+        "iconPath": "image/coming.png",
+        "selectedIconPath": "image/coming-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/coming.png",
+        "selectedIconPath": "image/coming-active.png"
+      }
     ]
   }
 }

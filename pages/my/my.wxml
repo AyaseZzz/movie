@@ -1,2 +1,3 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<import src='../../compont/star/star.wxml'/>
+<template is="starsTpl"></template>  

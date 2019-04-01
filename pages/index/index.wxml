@@ -1,15 +1,71 @@
 <!--index.wxml-->
+<import src='../../compont/star/star.wxml' />
+<wxs module="filter" src="../../filter/average.wxs"></wxs>
+<view class='header'>
+<view class='search' bindtap='search'>
+  <image src='../../image/search.png'></image>搜索
+</view>
+</view>
 <view class="container">
   <view class='nav'>
-    <text class='title'>影院热映</text>
-    <text class='more' bindtap='more'>更多</text>
+    <text class='nav_title'>影院热映</text>
+    <text class='more' bindtap='more'>查看更多 ></text>
   </view>
   <scroll-view scroll-x="true" scroll-left="0">
-  <view class="scroll-x">
-    <view wx:for="{{list}}">
-       <image src='{{item.images.small}}'></image>
+    <view class="scroll-x">
+      <view wx:for="{{movieHot}}">
+        <image src='{{item.images.small}}' class='pic'></image>
+        <text class='title'>{{item.title}}</text>
+        <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+      </view>
     </view>
-  </view>
-</scroll-view>
+  </scroll-view>
+</view>
 
+<view class="container">
+  <view class='nav'>
+    <text class='nav_title'>豆瓣热门</text>
+    <text class='more' bindtap='more'>查看更多 ></text>
+  </view>
+  <scroll-view scroll-x="true" scroll-left="0">
+    <view class="scroll-x">
+      <view wx:for="{{doubanHot}}">
+        <image src='{{item.images.small}}' class='pic'></image>
+        <text class='title'>{{item.title}}</text>
+        <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="container">
+  <view class='nav'>
+    <text class='nav_title'>近期热门剧集</text>
+    <text class='more' bindtap='more'>查看更多 ></text>
+  </view>
+  <scroll-view scroll-x="true" scroll-left="0">
+    <view class="scroll-x">
+      <view wx:for="{{movieHot}}">
+        <image src='{{item.images.small}}' class='pic'></image>
+        <text class='title'>{{item.title}}</text>
+        <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="container">
+  <view class='nav'>
+    <text class='nav_title'>近期热门综艺节目</text>
+    <text class='more' bindtap='more'>查看更多 ></text>
+  </view>
+  <scroll-view scroll-x="true" scroll-left="0">
+    <view class="scroll-x">
+      <view wx:for="{{movieHot}}">
+        <image src='{{item.images.small}}' class='pic'></image>
+        <text class='title'>{{item.title}}</text>
+        <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+      </view>
+    </view>
+  </scroll-view>
 </view>
