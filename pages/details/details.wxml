@@ -1,2 +1,50 @@
 <!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<import src='../../compont/star/star.wxml' />
+<wxs module="filter" src="../../filter/average.wxs"></wxs>
+<view class='list' wx:if="{{show}}">
+  <view class='content'>
+    <image class='pic' src="{{detail.images.medium}}"></image>
+    <view class='list_body'>
+      <view class='header'>
+        <text class='title'>{{detail.title}}</text>
+
+        <view class='details'>
+          <text wx:for='{{detail.genres}}'>{{item}}</text>
+          <span class='line' >/</span>
+          <text>{{detail.countries}}</text>
+          <span class='line'>/</span>
+          <text>{{detail.year}}年</text>
+          
+          
+          <span class='line'>/</span>
+          <text>{{detail.subtype}}</text>
+
+        </view>
+      </view>
+      <view class='avg'>
+        <text>豆瓣评分</text>
+        <text>{{detail.ratings_count}}人评分</text>
+      </view>
+      <template is="starsTpl" data="{{score:detail.rating.average}}"></template>
+    </view>
+  </view>
+  <view class='summary'>
+    <view>简介</view>
+    <text>{{detail.summary}}</text>
+
+  </view>
+
+  <view class='nav'>
+    <text class='nav_title'>主要演员</text>
+
+  </view>
+  <scroll-view scroll-x="true" scroll-left="0">
+    <view class="scroll-x">
+      <view wx:for="{{detail.casts}}">
+        <image src='{{item.avatars.small}}' class='pics'></image>
+        <text class='title'>{{item.name}}</text>
+
+      </view>
+    </view>
+  </scroll-view>
+</view>

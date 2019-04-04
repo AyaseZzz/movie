@@ -1,22 +1,22 @@
 @import '../../compont/star/star.wxss';
-.header{
+
+.header {
   background-color: #42bd56;
   padding: 20rpx 0;
 }
+
 .search {
   height: 30rpx;
   line-height: 30rpx;
   text-align: center;
   border: 1px solid #ccc;
   width: 94%;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 15rpx;
   color: #ccc;
   padding: 10rpx 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
   background-color: #fff;
-  
-  
 }
 
 .search image {
@@ -24,13 +24,10 @@
   height: 30rpx;
   width: 30rpx;
   vertical-align: middle;
-  
 }
 
-
-
 .nav {
-  width: 96%;
+  width: 100%;
   height: 100rpx;
   line-height: 100rpx;
   display: flex;
@@ -51,7 +48,7 @@
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
-  text-align: center;
+  
   margin-right: 2%;
   width: 100px;
   height: 187px;
@@ -59,7 +56,7 @@
 
 .scroll-x .title {
   margin-top: 0.2rem;
-  font-size: 0.94rem;
+  font-size: 0.8rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -70,16 +67,6 @@
   width: 100px;
   height: 143px;
 }
-
-/* .avg{
-  margin-top: .3rem;
-  display: flex;
-  flex-direction: row;
-  line-height: 25rpx;
-  height: 25rpx; 
-  justify-content: space-around
-  
-} */
 
 .star {
   font-size: 0.7rem;
@@ -92,4 +79,12 @@
 
 .active {
   color: blue;
+}
+
+.movieNum {
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  height: 25rpx;
+  line-height: 25rpx;
+  text-align: left;
 }

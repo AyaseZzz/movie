@@ -6,30 +6,31 @@
   <image src='../../image/search.png'></image>搜索
 </view>
 </view>
-<view class="container">
+<view class="container"  wx:if="{{show}}">
   <view class='nav'>
     <text class='nav_title'>影院热映</text>
-    <text class='more' bindtap='more'>查看更多 ></text>
+    <text class='more' bindtap='more'>查看更多></text>
   </view>
   <scroll-view scroll-x="true" scroll-left="0">
     <view class="scroll-x">
-      <view wx:for="{{movieHot}}">
+      <view wx:for="{{movieHot}}" bindtap='detail' data-title='{{item.title}}' data-id='{{item.id}}'>
         <image src='{{item.images.small}}' class='pic'></image>
         <text class='title'>{{item.title}}</text>
-        <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+        <template is="starsTpl" data="{{score:item.rating.average}}" wx:if='{{item.rating.average}}'></template>
+        <view wx:else class='movieNum'>暂无评分</view>
       </view>
     </view>
   </scroll-view>
 </view>
 
-<view class="container">
+<view class="container" wx:if="{{show}}">
   <view class='nav'>
     <text class='nav_title'>豆瓣热门</text>
-    <text class='more' bindtap='more'>查看更多 ></text>
+    <text class='more' bindtap='more'  data-url='/v2/movie/new_movies'>查看更多></text>
   </view>
   <scroll-view scroll-x="true" scroll-left="0">
     <view class="scroll-x">
-      <view wx:for="{{doubanHot}}">
+      <view wx:for="{{doubanHot}}" bindtap='detail' data-title='{{item.title}}' data-id='{{item.id}}' >
         <image src='{{item.images.small}}' class='pic'></image>
         <text class='title'>{{item.title}}</text>
         <template is="starsTpl" data="{{score:item.rating.average}}"></template>
@@ -38,7 +39,7 @@
   </scroll-view>
 </view>
 
-<view class="container">
+<!-- <view class="container" wx:if="{{show}}">
   <view class='nav'>
     <text class='nav_title'>近期热门剧集</text>
     <text class='more' bindtap='more'>查看更多 ></text>
@@ -54,7 +55,7 @@
   </scroll-view>
 </view>
 
-<view class="container">
+<view class="container" wx:if="{{show}}">
   <view class='nav'>
     <text class='nav_title'>近期热门综艺节目</text>
     <text class='more' bindtap='more'>查看更多 ></text>
@@ -68,4 +69,4 @@
       </view>
     </view>
   </scroll-view>
-</view>
+</view> -->

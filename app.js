@@ -1,4 +1,8 @@
 //app.js
+const myUrl = 'http://localhost';
+
+// const myUrl = 'http://t.yushu.im';
+// const myUrl = "https://douban.uieee.com"; // 网络接口全局变量
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -33,7 +37,7 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null
+ globalData: {
+    URL: myUrl
   }
 })

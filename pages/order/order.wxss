@@ -1,1 +1,65 @@
-/* pages/order/order.wxss */
+@import '../../compont/star/star.wxss';
+
+
+.content {
+  padding: 20rpx ;
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-size: .7rem;
+  font-weight: 800;
+ 
+}
+.header{
+ height: 171rpx;
+}
+
+.pic {
+  width: 120rpx;
+  height: 171rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 0rpx 0rpx 2rpx #ccc;
+}
+
+.list_body {
+  font-size: 0.7rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+
+.details {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: .4rem;
+}
+
+.details text {
+  margin-right: 5rpx;
+}
+
+.line {
+  margin: 0 10rpx 0 5rpx;
+}
+
+.avg {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.avg>text:first-child {
+  margin-right: 20rpx;
+}
+
+.avg>text:last-child {
+  color: #ccc;
+  font-size: 0.5rem;
+}
+

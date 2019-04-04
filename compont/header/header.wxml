@@ -1,8 +1,0 @@
-<template name="header">
-<view class='header'>
-<view class='search'>
-  <image src='../../image/search.png'></image>
-  <input type='text' placeholder='搜索'></input>
-</view>
-</view>
-</template>

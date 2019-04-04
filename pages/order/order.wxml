@@ -1,2 +1,20 @@
-<!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<import src='../../compont/star/star.wxml' />
+<wxs module="filter" src="../../filter/average.wxs"></wxs>
+<view class='content' wx:if='{{show}}' wx:for='{{top}}' data-id='{{item.id}}' data-title='{{item.title}}' bindtap='detail'>
+  <image class='pic' src="{{item.images.large}}"></image>
+  <view class='list_body'>
+    <view class='header'>
+      <text class='title'>{{item.title}}</text>
+      <template is="starsTpl" data="{{score:item.rating.average}}"></template>
+      <view class='details'>
+        <text>{{item.genres}}</text>
+        <span class='line'>/</span>
+        <text wx:for="{{item.directors}}">{{item.name}}</text>
+        <span class='line'>/</span>
+        <text wx:for="{{item.casts}}">{{item.name}}</text>
+        <span class='line'>/</span>
+        <text>{{item.year}}年</text>
+      </view>
+    </view>
+  </view>
+</view>

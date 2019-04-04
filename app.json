@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/details/details",
     "pages/index/index",
-    "pages/search/search",
     "pages/order/order",
+    
+    "pages/search/search",
+    "pages/details/details",
+    "pages/more/more",
+    
     "pages/my/my",
     "pages/logs/logs"
   ],
@@ -20,22 +23,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "image/coming.png",
-        "selectedIconPath": "image/coming-active.png"
+        "text": "正在热映",
+        "iconPath": "image/movie-recorder.png",
+        "selectedIconPath": "image/movie-recorder2.png"
       },
       {
         "pagePath": "pages/order/order",
-        "text": "榜单",
-        "iconPath": "image/coming.png",
-        "selectedIconPath": "image/coming-active.png"
+        "text": "热门推荐",
+        "iconPath": "image/movie-top.png",
+        "selectedIconPath": "image/movie-top2.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "image/coming.png",
-        "selectedIconPath": "image/coming-active.png"
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my_select.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   }
 }

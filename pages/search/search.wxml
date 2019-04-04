@@ -11,12 +11,12 @@
   </view>
 </view>
 <view class='list'>
-  <view class='content' wx:for="{{searchMovie}}" wx:key='item.id' data-id='{{item.id}}' bindtap='detail'>
+  <view class='content' wx:for="{{searchMovie}}" wx:key='item.id' data-id='{{item.id}}' data-title='{{item.title}}' bindtap='detail'>
     <image class='pic' src="{{item.images.medium}}"></image>
     <view class='list_body'>
       <text class='title'>{{item.title}}</text>
       <template is="starsTpl" data="{{score:item.rating.average}}"></template>
-      <text class='details'>{{item.year}}/{{item.directors[0].name}}/{{item.genres}}</text>
+      <text class='details'>{{item.year}}<text wx:if='{{item.directors[0].name}}'>/</text>{{item.directors[0].name}}<text wx:if='{{item.genres}}'>/</text>{{item.genres}}</text>
     </view>
   </view>
 </view>
